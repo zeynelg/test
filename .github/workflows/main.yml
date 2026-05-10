@@ -2,10 +2,14 @@ name: Basic Echo Test
 
 on:
   workflow_dispatch:
+env:
+  LASTNAME: "Gencer" 
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Merhaba de
-        run: echo "Merhaba, ${{vars.name}}"
+        run: |
+          echo "Merhaba, ${{vars.name}}"
+          echo $LASTNAME  
