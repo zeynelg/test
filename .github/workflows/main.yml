@@ -8,14 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Merhaba de
-        run: echo "Merhaba, GitHub Actions!"
-
-      - name: Tarih yazdir
-        run: |
-          echo "Tarih: $(date)"
-
-      - name: Birkac satir yaz
-        run: |
-          echo "Bu birinci satir"
-          echo "Bu ikinci satir"
-          echo "Bu ucuncu satir"
+        run: echo "Merhaba, ${{vars.name}}"
